@@ -1,10 +1,26 @@
 {% extends 'base.html' %}
+{% load static %}
 
 
 {% block title %}About{% endblock title %}
 {% block content %}
-<h1>About Me</h1>
-<p>We are Monsters Inc, not to be confused with Monster Inc. Here we develop monsters to fight proxy wars in third world countries. </p>
-<p>Click to go back to home page<a href="{% url 'home' %}"> here.</a></p>
+<h1 class="title">About the Black Knight Templars.</h1>
+<p>Pick up your sword and leave your belongings to the church, there is heresy to be fought brother!</p>
+<p>The Knights Templar were an elite fighting force of their day, highly trained, well-equipped, and highly motivated; one of the tenets of their religious order was that they were forbidden from retreating in battle, unless outnumbered three to one, and even then only by order of their commander, or if the Templar flag went down. Not all Knights Templar were warriors. The mission of most of the members was one of support – to acquire resources which could be used to fund and equip the small percentage of members who were fighting on the front lines. There were actually three classes within the orders. The highest class was the knight. When a candidate was sworn into the order, they made the knight a monk. They wore white robes. The knights could hold no property and receive no private letters. They could not be married or betrothed and could not have any vow in any other Order. They could not have debt more than they could pay, and no infirmities. The Templar priest class was similar to the modern day military chaplain. Wearing green robes, they conducted religious services, led prayers, and were assigned record keeping and letter writing. They always wore gloves, unless they were giving Holy Communion. The mounted men-at-arms represented the most common class, and they were called "brothers". They were usually assigned two horses each and held many positions, including guard, steward, squire or other support vocations. As the main support staff, they wore black or brown robes and were partially garbed in chain mail or plate mail. The armor was not as complete as the knights. Because of this infrastructure, the warriors were well-trained and very well armed. Even their horses were trained to fight in combat, fully armored.[1] The combination of soldier and monk was also a powerful one, as to the Templar knights, martyrdom in battle was one of the most glorious ways to die.
+
+    The Templars were also shrewd tacticians, following the dream of Saint Bernard who had declared that a small force, under the right conditions, could defeat a much larger enemy. One of the key battles in which this was demonstrated was in 1177, at the Battle of Montgisard. The famous Muslim military leader Saladin was attempting to push toward Jerusalem from the south, with a force of 26,000 soldiers. He had pinned the forces of Jerusalem's King Baldwin IV, about 500 knights and their supporters, near the coast, at Ascalon. Eighty Templar knights and their own entourage attempted to reinforce. They met Saladin's troops at Gaza, but were considered too small a force to be worth fighting, so Saladin turned his back on them and headed with his army towards Jerusalem.
+    
+    Once Saladin and his army had moved on, the Templars were able to join King Baldwin's forces, and together they proceeded north along the coast. Saladin had made a key mistake at that point – instead of keeping his forces together, he permitted his army to temporarily spread out and pillage various villages on their way to Jerusalem. The Templars took advantage of this low state of readiness to launch a surprise ambush directly against Saladin and his bodyguard, at Montgisard near Ramla. Saladin's army was spread too thin to adequately defend themselves, and he and his forces were forced to fight a losing battle as they retreated back to the south, ending up with only a tenth of their original number. The battle was not the final one with Saladin, but it bought a year of peace for the Kingdom of Jerusalem, and the victory became a heroic legend.
+    
+    <img src="{% static 'admin/img/knight4.jpg' %}" alt="Knight 4">
+    Another key tactic of the Templars was that of the "squadron charge". A small group of knights and their heavily armed warhorses would gather into a tight unit which would gallop full speed at the enemy lines, with a determination and force of will that made it clear that they would rather commit suicide than fall back. This terrifying onslaught would frequently have the desired result of breaking a hole in the enemy lines, thereby giving the other Crusader forces an advantage.[2]
+    The Templars, though relatively small in number, routinely joined other armies in key battles. They would be the force that would ram through the enemy's front lines at the beginning of a battle, or the fighters that would protect the army from the rear. They fought alongside King Louis VII of France, and King Richard I of England.[3] In addition to battles in Palestine, members of the Order also fought in the Spanish and Portuguese Reconquista, such as at the Siege of Tomar in 1190.</p>
+</p>
+<img src="{% static 'admin/img/knight5.jpg' %}" alt="Knight 5">
+    <p>Click <a href="{% url 'home' %}"> here</a> to go back to the Home page.</p>
 
 {% endblock content %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'admin/css/mystyle.css' %}">
+{% endblock %}

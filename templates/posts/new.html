@@ -1,13 +1,19 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block title %}New Post{% endblock title %}
 
 {% block content %}
+
 <h1>New Post</h1>
 <form method="Post">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" class="btn btn-success" value="Create">
 </form>
+<img src="{% static 'admin/img/knight6.jpg' %}" alt="Knight 6">
 {% endblock content %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'admin/css/mystyle.css' %}">
+{% endblock %}

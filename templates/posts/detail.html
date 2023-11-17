@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block title %}{{ post.title }}{% endblock title %}
 
@@ -13,3 +13,7 @@
 <a  href="{% url 'delete' post.id %}">Edit</a>
 {% endif %}
 {% endblock content %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'admin/css/mystyle.css' %}">
+{% endblock %}

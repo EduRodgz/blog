@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block title %}Posts{% endblock title %}
 
 {% block content %}
-<h1>Posts</h1>
+<h1 class="title">Posts</h1>
 <div class="container">
 
     {% for post in post_list %}
     <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">{{ post.title }}</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">{{ post.subtitle }}</h6>
+            <h6 class="card-subtitle ">{{ post.subtitle }}</h6>
             <p class="card-text">{{ post.body }}</p>
             
             <a href="{% url 'detail' post.id %}" class="card-link">Click here for more</a>
@@ -20,4 +20,8 @@
     <br />
     {% endfor %}
 </div>
+<img src="{% static 'admin/img/knight7.jpg' %}" alt="Knight 7">
 {% endblock content %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'admin/css/mystyle.css' %}">
+{% endblock %}

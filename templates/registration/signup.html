@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block title %}Sign Up{% endblock title %}
+
 {% block content %}
 <h1>Sign up</h1>
 <form method="POST">
@@ -9,4 +10,9 @@
     {{ form.as_p }}
     <input type="submit" class="btn btn-success" value="Sign Up">
 </form>
+<img src="{% static 'admin/img/knight9.webp' %}" alt="Knight 9">
 {% endblock content %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'admin/css/mystyle.css' %}">
+{% endblock %}

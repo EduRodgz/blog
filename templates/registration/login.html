@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block title %}Log In{% endblock title %}
 
@@ -9,5 +9,10 @@
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" class="btn btn-success" value="Log In">
+    <p>If you do not have an account consider clicking on the top right corner to create an account.</p>
 </form>
+<img src="{% static 'admin/img/knight9.webp' %}" alt="Knight 9">
 {% endblock content %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'admin/css/mystyle.css' %}">
+{% endblock %}
