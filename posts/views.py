@@ -61,17 +61,13 @@ class PostDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        if (
-            context["post"].status_.name == "draft" and
-            context["post"].author != self.request.user
-        ):
+        post = context["post"]
+        if post.status.name == "draft" and post.author != self.request.user:
             raise PermissionDenied()
-        if(
-            context["post"].status_.name == "archived" and
-            self.request.user.is_authenticated != True
-        ):
+        if post.status.name == "archived" and not self.request.user.is_authenticated:
             raise PermissionDenied()
         return context
+
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     template_name = "posts/new.html"

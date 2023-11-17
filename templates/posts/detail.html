@@ -5,12 +5,12 @@
 
 {% block content %}
 <h1>{{ post.title }}</h1>
-<h3>{{ post.subtitle }}</h3>
+<h3 class="title2">{{ post.subtitle }}</h3>
 <small> Created on: {{ post.created_on }}</small>
 <p>{{ post.body }}</p>
 {% if user == post.author %}
-<a  href="{% url 'edit' post.id %}">Delete</a>
-<a  href="{% url 'delete' post.id %}">Edit</a>
+<a  href="{% url 'edit' post.id %}">Edit</a>
+<a  href="{% url 'delete' post.id %}">Delete</a>
 {% endif %}
 {% endblock content %}
 
